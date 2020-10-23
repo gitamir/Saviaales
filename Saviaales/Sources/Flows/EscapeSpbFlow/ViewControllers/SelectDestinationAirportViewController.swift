@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SelectDestinationAirportViewController.swift
 //  Saviaales
 //
 //  Created by Amir Nuriev on 23.10.2020.
@@ -8,13 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class SelectDestinationAirportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-

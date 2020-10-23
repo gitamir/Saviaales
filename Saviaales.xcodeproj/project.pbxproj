@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		739A83BA2542F9EC00E47A25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A83B92542F9EC00E47A25 /* AppDelegate.swift */; };
-		739A83BC2542F9EC00E47A25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A83BB2542F9EC00E47A25 /* SceneDelegate.swift */; };
-		739A83BE2542F9EC00E47A25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A83BD2542F9EC00E47A25 /* ViewController.swift */; };
-		739A83C12542F9EC00E47A25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739A83BF2542F9EC00E47A25 /* Main.storyboard */; };
+		739A83BE2542F9EC00E47A25 /* SelectDestinationAirportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A83BD2542F9EC00E47A25 /* SelectDestinationAirportViewController.swift */; };
+		739A83C12542F9EC00E47A25 /* EscapeSpb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739A83BF2542F9EC00E47A25 /* EscapeSpb.storyboard */; };
 		739A83C32542F9EE00E47A25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739A83C22542F9EE00E47A25 /* Assets.xcassets */; };
 		739A83C62542F9EE00E47A25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739A83C42542F9EE00E47A25 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +17,8 @@
 /* Begin PBXFileReference section */
 		739A83B62542F9EC00E47A25 /* Saviaales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saviaales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739A83B92542F9EC00E47A25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		739A83BB2542F9EC00E47A25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		739A83BD2542F9EC00E47A25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		739A83C02542F9EC00E47A25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		739A83BD2542F9EC00E47A25 /* SelectDestinationAirportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDestinationAirportViewController.swift; sourceTree = "<group>"; };
+		739A83C02542F9EC00E47A25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EscapeSpb.storyboard; sourceTree = "<group>"; };
 		739A83C22542F9EE00E47A25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		739A83C52542F9EE00E47A25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		739A83C72542F9EE00E47A25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +54,70 @@
 		739A83B82542F9EC00E47A25 /* Saviaales */ = {
 			isa = PBXGroup;
 			children = (
-				739A83B92542F9EC00E47A25 /* AppDelegate.swift */,
-				739A83BB2542F9EC00E47A25 /* SceneDelegate.swift */,
-				739A83BD2542F9EC00E47A25 /* ViewController.swift */,
-				739A83BF2542F9EC00E47A25 /* Main.storyboard */,
+				739A83CD2542FC7200E47A25 /* Sources */,
+				739A83CE2542FC7A00E47A25 /* Resources */,
+			);
+			path = Saviaales;
+			sourceTree = "<group>";
+		};
+		739A83CD2542FC7200E47A25 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				739A83CF2542FC8C00E47A25 /* App */,
+				739A83D02542FCDF00E47A25 /* Flows */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		739A83CE2542FC7A00E47A25 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				739A83C22542F9EE00E47A25 /* Assets.xcassets */,
 				739A83C42542F9EE00E47A25 /* LaunchScreen.storyboard */,
 				739A83C72542F9EE00E47A25 /* Info.plist */,
 			);
-			path = Saviaales;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		739A83CF2542FC8C00E47A25 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				739A83B92542F9EC00E47A25 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		739A83D02542FCDF00E47A25 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				739A83D12542FCF800E47A25 /* EscapeSpbFlow */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		739A83D12542FCF800E47A25 /* EscapeSpbFlow */ = {
+			isa = PBXGroup;
+			children = (
+				739A83D22542FD1600E47A25 /* Views */,
+				739A83D32542FD1B00E47A25 /* ViewControllers */,
+				739A83BF2542F9EC00E47A25 /* EscapeSpb.storyboard */,
+			);
+			path = EscapeSpbFlow;
+			sourceTree = "<group>";
+		};
+		739A83D22542FD1600E47A25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		739A83D32542FD1B00E47A25 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				739A83BD2542F9EC00E47A25 /* SelectDestinationAirportViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +180,7 @@
 			files = (
 				739A83C62542F9EE00E47A25 /* LaunchScreen.storyboard in Resources */,
 				739A83C32542F9EE00E47A25 /* Assets.xcassets in Resources */,
-				739A83C12542F9EC00E47A25 /* Main.storyboard in Resources */,
+				739A83C12542F9EC00E47A25 /* EscapeSpb.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,21 +191,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				739A83BE2542F9EC00E47A25 /* ViewController.swift in Sources */,
+				739A83BE2542F9EC00E47A25 /* SelectDestinationAirportViewController.swift in Sources */,
 				739A83BA2542F9EC00E47A25 /* AppDelegate.swift in Sources */,
-				739A83BC2542F9EC00E47A25 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		739A83BF2542F9EC00E47A25 /* Main.storyboard */ = {
+		739A83BF2542F9EC00E47A25 /* EscapeSpb.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				739A83C02542F9EC00E47A25 /* Base */,
 			);
-			name = Main.storyboard;
+			name = EscapeSpb.storyboard;
 			sourceTree = "<group>";
 		};
 		739A83C42542F9EE00E47A25 /* LaunchScreen.storyboard */ = {
@@ -216,7 +268,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +323,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 948A4A3PQC;
-				INFOPLIST_FILE = Saviaales/Info.plist;
+				INFOPLIST_FILE = Saviaales/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = amir.nuriev.Saviaales;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 948A4A3PQC;
-				INFOPLIST_FILE = Saviaales/Info.plist;
+				INFOPLIST_FILE = Saviaales/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = amir.nuriev.Saviaales;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
