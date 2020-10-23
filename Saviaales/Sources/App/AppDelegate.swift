@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = window
+        let container = ContainerFactory(baseUrl: "http://places.aviasales.ru/").makeContainer(.escapeSpbDefault)
+        let appCoordinator = AppCoordinator(window: window, container: container)
+        appCoordinator.start()
         return true
     }
 }
