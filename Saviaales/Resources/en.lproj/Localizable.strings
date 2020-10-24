@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Saviaales
+
+  Created by Amir Nuriev on 24.10.2020.
+  Copyright © 2020 Amir Nuriev. All rights reserved.
+*/
+
+"select_destination_cta_button_title" = "Take off!";
+"select_destination_selector_placeholder" = "Please select your destination...";

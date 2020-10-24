@@ -19,8 +19,8 @@ final class EscapeSpbFlow: AirportsServiceDependency {
     }
 
     func start() {
-        let viewController = SelectDestinationAirportViewController()
-        let navigationController = CustomNavigationController(rootViewController: viewController)
+        let initialViewController = createSelectDestinationViewController()
+        let navigationController = CustomNavigationController(rootViewController: initialViewController)
         self.navigationController = navigationController
         onRootViewControllerCreated(navigationController)
         airportsService.getAirports(for: "paris") { result in
@@ -33,5 +33,19 @@ final class EscapeSpbFlow: AirportsServiceDependency {
                     print(error.localizedDescription)
             }
         }
+    }
+
+    private func createSelectDestinationViewController() -> UIViewController {
+        let viewController: SelectDestinationAirportViewController = .instantiateFromSameNamedStoryboard()
+        viewController.input = .init(departureAirport: "LED")
+        viewController.output = .init(
+            selectDestinationAirport: { completion in
+                print("show select destination")
+            },
+            showFlightScreen: {
+                print("show flight screen")
+            }
+        )
+        return viewController
     }
 }
