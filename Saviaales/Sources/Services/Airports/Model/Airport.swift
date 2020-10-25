@@ -11,7 +11,7 @@ import CoreLocation
 struct Airport: Decodable, Equatable {
     struct Location: Decodable {
         private let latitude: Double
-        let longitude: Double
+        private let longitude: Double
         var coordinate: CLLocation {
             CLLocation(latitude: latitude, longitude: longitude)
         }
@@ -19,6 +19,11 @@ struct Airport: Decodable, Equatable {
         enum CodingKeys: String, CodingKey {
             case latitude = "lat"
             case longitude = "lon"
+        }
+
+        init(latitude: Double, longitude: Double) {
+            self.latitude = latitude
+            self.longitude = longitude
         }
     }
 
@@ -30,4 +35,12 @@ struct Airport: Decodable, Equatable {
     static func == (lhs: Airport, rhs: Airport) -> Bool {
         lhs.iata == rhs.iata
     }
+
+    static let defaultDeparture = Airport(
+        airportName: "Pulkovo Airport",
+        location: .init(latitude: 59.806084, longitude: 30.3083),
+        name: "Saint Petersburg, Russia",
+        iata: "LED"
+    )
+    static let defaultDepartureRequestString = "saint petersburg"
 }

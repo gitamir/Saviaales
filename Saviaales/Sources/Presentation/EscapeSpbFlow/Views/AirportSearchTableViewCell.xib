@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AirportSearchTableViewCell" rowHeight="90" id="mRN-4d-uf9" customClass="AirportSearchTableViewCell" customModule="Saviaales" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mRN-4d-uf9" id="HIl-fP-oeh">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aiport Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqK-UY-sG2">
+                        <rect key="frame" x="8" y="53" width="191" height="35"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDY-ix-NHH">
+                        <rect key="frame" x="207" y="0.0" width="207" height="104"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IATA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOi-Pr-GUo">
+                                <rect key="frame" x="86.5" y="41.5" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uOi-Pr-GUo" firstAttribute="centerX" secondItem="rDY-ix-NHH" secondAttribute="centerX" id="H9m-hF-efb"/>
+                            <constraint firstItem="uOi-Pr-GUo" firstAttribute="centerY" secondItem="rDY-ix-NHH" secondAttribute="centerY" id="gau-In-6aB"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nu-Fc-Gze">
+                        <rect key="frame" x="8" y="16" width="191" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rDY-ix-NHH" firstAttribute="top" secondItem="HIl-fP-oeh" secondAttribute="top" id="8WP-cR-HXg"/>
+                    <constraint firstAttribute="bottom" secondItem="rDY-ix-NHH" secondAttribute="bottom" id="DrK-Hr-G0q"/>
+                    <constraint firstAttribute="trailing" secondItem="rDY-ix-NHH" secondAttribute="trailing" id="I1c-BI-0Zj"/>
+                    <constraint firstItem="TqK-UY-sG2" firstAttribute="leading" secondItem="HIl-fP-oeh" secondAttribute="leading" constant="8" id="TIw-QA-cAh"/>
+                    <constraint firstItem="TqK-UY-sG2" firstAttribute="top" secondItem="5nu-Fc-Gze" secondAttribute="bottom" constant="16" id="WBB-QV-EGx"/>
+                    <constraint firstItem="5nu-Fc-Gze" firstAttribute="leading" secondItem="HIl-fP-oeh" secondAttribute="leading" constant="8" id="Wet-cc-7ev"/>
+                    <constraint firstAttribute="bottom" secondItem="TqK-UY-sG2" secondAttribute="bottom" constant="16" id="X5n-Rx-F3d"/>
+                    <constraint firstItem="5nu-Fc-Gze" firstAttribute="top" secondItem="HIl-fP-oeh" secondAttribute="top" constant="16" id="ZX6-R3-WvV"/>
+                    <constraint firstItem="rDY-ix-NHH" firstAttribute="leading" secondItem="5nu-Fc-Gze" secondAttribute="trailing" constant="8" id="oBb-38-UPs"/>
+                    <constraint firstItem="rDY-ix-NHH" firstAttribute="leading" secondItem="TqK-UY-sG2" secondAttribute="trailing" constant="8" id="u1R-ge-I3W"/>
+                    <constraint firstItem="rDY-ix-NHH" firstAttribute="width" secondItem="HIl-fP-oeh" secondAttribute="width" multiplier="0.5" id="ure-2x-dFy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="airportNameLabel" destination="TqK-UY-sG2" id="UWY-fJ-ax5"/>
+                <outlet property="iataCodeLabel" destination="uOi-Pr-GUo" id="4Nm-3d-rQ7"/>
+                <outlet property="nameLabel" destination="5nu-Fc-Gze" id="egr-Fj-kng"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="162.72321428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -7,6 +7,9 @@
 //
 
 protocol AirportsService {
+    var departureAirport: Airport { get }
+    var destinationAirport: Airport? { get set }
+    var isFlightPossible: Bool { get }
     func getAirports(for queryString: String, _ completion: @escaping (Result<[Airport], NetworkError>) -> Void)
 }
 
