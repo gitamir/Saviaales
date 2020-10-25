@@ -32,14 +32,12 @@ final class EscapeSpbFlow: AirportsServiceDependency {
         )
         viewController.output = .init(
             selectDestinationAirport: showSearchAirportsViewController(_:),
-            showFlightScreen: {}
+            showFlightScreen: showFlightScreen
         )
         return viewController
     }
 
     private func showSearchAirportsViewController(_ selectAirportCompletion: @escaping (String) -> Void) {
-        guard let navigationController = navigationController else { return }
-
         let viewController: SearchAirportsViewController = .instantiateFromSameNamedStoryboard()
         viewController.input = .init(
             lastUsedIATA: airportsService.destinationAirport?.iata,
@@ -52,6 +50,17 @@ final class EscapeSpbFlow: AirportsServiceDependency {
                 self.navigationController?.popViewController(animated: true)
             }
         )
-        navigationController.pushViewController(viewController, animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    private func showFlightScreen() {
+        guard let destinationAirport = airportsService.destinationAirport else { return }
+
+        let viewController: MapViewController = .instantiateFromSameNamedStoryboard()
+        viewController.input = .init(
+            departureAirport: airportsService.departureAirport,
+            destinationAirport: destinationAirport
+        )
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

@@ -17,6 +17,8 @@
 		731B99232544DAEE002D2E7E /* AirportSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B99222544DAEE002D2E7E /* AirportSearchTableViewCell.swift */; };
 		731B99252544DB06002D2E7E /* AirportSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 731B99242544DB06002D2E7E /* AirportSearchTableViewCell.xib */; };
 		731B992825459393002D2E7E /* KeyboardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B992725459393002D2E7E /* KeyboardBehavior.swift */; };
+		731B992B2545C056002D2E7E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B992A2545C056002D2E7E /* MapViewController.swift */; };
+		731B992D2545C086002D2E7E /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 731B992C2545C086002D2E7E /* MapViewController.storyboard */; };
 		738FBCD42543358D006CDD80 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738FBCD32543358D006CDD80 /* NetworkClient.swift */; };
 		738FBCD7254335E4006CDD80 /* NetworkClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738FBCD6254335E4006CDD80 /* NetworkClientDefault.swift */; };
 		738FBCDC25433D6A006CDD80 /* NetworkSearchResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738FBCDB25433D6A006CDD80 /* NetworkSearchResource.swift */; };
@@ -31,6 +33,14 @@
 		739A83DE2543147700E47A25 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A83DD2543147700E47A25 /* Container.swift */; };
 		739A83E025431D4800E47A25 /* ContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A83DF25431D4800E47A25 /* ContainerFactory.swift */; };
 		739F525525436225000A6CED /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F525425436225000A6CED /* Airport.swift */; };
+		73AD9B802545C99F00F8A990 /* AirportAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD9B7F2545C99F00F8A990 /* AirportAnnotation.swift */; };
+		73AD9B832545D57800F8A990 /* PlaneAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD9B822545D57800F8A990 /* PlaneAnnotation.swift */; };
+		73AD9B852545D5D200F8A990 /* PlaneAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD9B842545D5D200F8A990 /* PlaneAnnotationView.swift */; };
+		73AD9B872545D5F500F8A990 /* AirportAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD9B862545D5F500F8A990 /* AirportAnnotationView.swift */; };
+		73AD9B892545DB0A00F8A990 /* MKAnnotationView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD9B882545DB0A00F8A990 /* MKAnnotationView+Extension.swift */; };
+		73AD9B8C2545DD2200F8A990 /* PolylineHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD9B8B2545DD2200F8A990 /* PolylineHelper.swift */; };
+		73AD9B8F2545EABF00F8A990 /* MKMapPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD9B8E2545EABF00F8A990 /* MKMapPoint+Extensions.swift */; };
+		73AD9B922545EC5300F8A990 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD9B912545EC5300F8A990 /* CGPoint+Extensions.swift */; };
 		73C7B40A2544421C00157BA1 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C7B4092544421C00157BA1 /* Style.swift */; };
 		73C7B40C25447BA000157BA1 /* AirportSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C7B40B25447BA000157BA1 /* AirportSelectionView.swift */; };
 		73C7B40E2544873600157BA1 /* NSLayoutConstraint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C7B40D2544873600157BA1 /* NSLayoutConstraint+Extensions.swift */; };
@@ -57,6 +67,8 @@
 		731B99222544DAEE002D2E7E /* AirportSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportSearchTableViewCell.swift; sourceTree = "<group>"; };
 		731B99242544DB06002D2E7E /* AirportSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirportSearchTableViewCell.xib; sourceTree = "<group>"; };
 		731B992725459393002D2E7E /* KeyboardBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBehavior.swift; sourceTree = "<group>"; };
+		731B992A2545C056002D2E7E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		731B992C2545C086002D2E7E /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		738FBCD32543358D006CDD80 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		738FBCD6254335E4006CDD80 /* NetworkClientDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientDefault.swift; sourceTree = "<group>"; };
 		738FBCDB25433D6A006CDD80 /* NetworkSearchResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSearchResource.swift; sourceTree = "<group>"; };
@@ -73,6 +85,14 @@
 		739A83DD2543147700E47A25 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		739A83DF25431D4800E47A25 /* ContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerFactory.swift; sourceTree = "<group>"; };
 		739F525425436225000A6CED /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		73AD9B7F2545C99F00F8A990 /* AirportAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAnnotation.swift; sourceTree = "<group>"; };
+		73AD9B822545D57800F8A990 /* PlaneAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneAnnotation.swift; sourceTree = "<group>"; };
+		73AD9B842545D5D200F8A990 /* PlaneAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneAnnotationView.swift; sourceTree = "<group>"; };
+		73AD9B862545D5F500F8A990 /* AirportAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAnnotationView.swift; sourceTree = "<group>"; };
+		73AD9B882545DB0A00F8A990 /* MKAnnotationView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotationView+Extension.swift"; sourceTree = "<group>"; };
+		73AD9B8B2545DD2200F8A990 /* PolylineHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineHelper.swift; sourceTree = "<group>"; };
+		73AD9B8E2545EABF00F8A990 /* MKMapPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapPoint+Extensions.swift"; sourceTree = "<group>"; };
+		73AD9B912545EC5300F8A990 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		73C7B4092544421C00157BA1 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		73C7B40B25447BA000157BA1 /* AirportSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportSelectionView.swift; sourceTree = "<group>"; };
 		73C7B40D2544873600157BA1 /* NSLayoutConstraint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extensions.swift"; sourceTree = "<group>"; };
@@ -123,6 +143,16 @@
 			path = KeyboardBehavior;
 			sourceTree = "<group>";
 		};
+		731B99292545C036002D2E7E /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				73AD9B812545D53000F8A990 /* Annotations */,
+				731B992A2545C056002D2E7E /* MapViewController.swift */,
+				731B992C2545C086002D2E7E /* MapViewController.storyboard */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		738FBCD225433525006CDD80 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +185,7 @@
 		738FBCDD25434F4F006CDD80 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				73AD9B8A2545DD0900F8A990 /* PolylineHelper */,
 				731B99262545937D002D2E7E /* KeyboardBehavior */,
 				731B99182544D056002D2E7E /* Debouncer */,
 				73C7B4082544420F00157BA1 /* Style */,
@@ -193,7 +224,7 @@
 			children = (
 				738FBCDD25434F4F006CDD80 /* Common */,
 				739A83CF2542FC8C00E47A25 /* App */,
-				739A83D82543116500E47A25 /* Dependecies */,
+				739A83D82543116500E47A25 /* Dependencies */,
 				738FBCD225433525006CDD80 /* Services */,
 				739A83D02542FCDF00E47A25 /* Presentation */,
 			);
@@ -245,6 +276,8 @@
 				73C7B40B25447BA000157BA1 /* AirportSelectionView.swift */,
 				731B99222544DAEE002D2E7E /* AirportSearchTableViewCell.swift */,
 				731B99242544DB06002D2E7E /* AirportSearchTableViewCell.xib */,
+				73AD9B842545D5D200F8A990 /* PlaneAnnotationView.swift */,
+				73AD9B862545D5F500F8A990 /* AirportAnnotationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,20 +285,21 @@
 		739A83D32542FD1B00E47A25 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				731B99292545C036002D2E7E /* Map */,
 				731B991B2544D70C002D2E7E /* SearchAirports */,
 				73D1776D25442F18001DD621 /* SelectDestination */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		739A83D82543116500E47A25 /* Dependecies */ = {
+		739A83D82543116500E47A25 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
 				739A83DA254312B800E47A25 /* DependencyContainer.swift */,
 				739A83DD2543147700E47A25 /* Container.swift */,
 				739A83DF25431D4800E47A25 /* ContainerFactory.swift */,
 			);
-			path = Dependecies;
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 		739F525325436217000A6CED /* Model */ = {
@@ -274,6 +308,23 @@
 				739F525425436225000A6CED /* Airport.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		73AD9B812545D53000F8A990 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				73AD9B7F2545C99F00F8A990 /* AirportAnnotation.swift */,
+				73AD9B822545D57800F8A990 /* PlaneAnnotation.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
+		73AD9B8A2545DD0900F8A990 /* PolylineHelper */ = {
+			isa = PBXGroup;
+			children = (
+				73AD9B8B2545DD2200F8A990 /* PolylineHelper.swift */,
+			);
+			path = PolylineHelper;
 			sourceTree = "<group>";
 		};
 		73C7B4072544420300157BA1 /* Extensions */ = {
@@ -289,6 +340,9 @@
 				731B990925449363002D2E7E /* String+Extensions.swift */,
 				731B991325449788002D2E7E /* UIButton+Extensions.swift */,
 				731B99202544D99F002D2E7E /* UITableViewCell+Extensions.swift */,
+				73AD9B882545DB0A00F8A990 /* MKAnnotationView+Extension.swift */,
+				73AD9B8E2545EABF00F8A990 /* MKMapPoint+Extensions.swift */,
+				73AD9B912545EC5300F8A990 /* CGPoint+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -375,6 +429,7 @@
 				731B99252544DB06002D2E7E /* AirportSearchTableViewCell.xib in Resources */,
 				739A83C32542F9EE00E47A25 /* Assets.xcassets in Resources */,
 				739A83C12542F9EC00E47A25 /* SelectDestinationAirportViewController.storyboard in Resources */,
+				731B992D2545C086002D2E7E /* MapViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,10 +440,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				731B992B2545C056002D2E7E /* MapViewController.swift in Sources */,
+				73AD9B832545D57800F8A990 /* PlaneAnnotation.swift in Sources */,
+				73AD9B852545D5D200F8A990 /* PlaneAnnotationView.swift in Sources */,
 				739A83DB254312B800E47A25 /* DependencyContainer.swift in Sources */,
+				73AD9B922545EC5300F8A990 /* CGPoint+Extensions.swift in Sources */,
 				739A83DE2543147700E47A25 /* Container.swift in Sources */,
 				739A83D72543114400E47A25 /* AppCoordinator.swift in Sources */,
 				738FBCD7254335E4006CDD80 /* NetworkClientDefault.swift in Sources */,
+				73AD9B8F2545EABF00F8A990 /* MKMapPoint+Extensions.swift in Sources */,
 				731B990A25449363002D2E7E /* String+Extensions.swift in Sources */,
 				73D1776725438830001DD621 /* EscapeSpbFlow.swift in Sources */,
 				739A83BE2542F9EC00E47A25 /* SelectDestinationAirportViewController.swift in Sources */,
@@ -396,11 +456,15 @@
 				731B992825459393002D2E7E /* KeyboardBehavior.swift in Sources */,
 				73D1776C25438F67001DD621 /* CustomNavigationController.swift in Sources */,
 				738FBCDF25434F69006CDD80 /* URLSessioDataTask+CancellableTask.swift in Sources */,
+				73AD9B892545DB0A00F8A990 /* MKAnnotationView+Extension.swift in Sources */,
 				731B99232544DAEE002D2E7E /* AirportSearchTableViewCell.swift in Sources */,
 				738FBCDC25433D6A006CDD80 /* NetworkSearchResource.swift in Sources */,
+				73AD9B802545C99F00F8A990 /* AirportAnnotation.swift in Sources */,
 				738FBCD42543358D006CDD80 /* NetworkClient.swift in Sources */,
+				73AD9B872545D5F500F8A990 /* AirportAnnotationView.swift in Sources */,
 				73D17765254369BB001DD621 /* AirportsServiceDefault.swift in Sources */,
 				731B991425449788002D2E7E /* UIButton+Extensions.swift in Sources */,
+				73AD9B8C2545DD2200F8A990 /* PolylineHelper.swift in Sources */,
 				731B991D2544D72D002D2E7E /* SearchAirportsViewController.swift in Sources */,
 				739F525525436225000A6CED /* Airport.swift in Sources */,
 				73D1777525443A2F001DD621 /* UIView+Extensions.swift in Sources */,
