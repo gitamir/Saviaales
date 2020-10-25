@@ -18,5 +18,9 @@ class CustomNavigationController: UINavigationController {
 
         navigationBar.shadowImage = UIImage()
         navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+        navigationBar.tintColor = Style.Color.white
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.titleTextAttributes = [ .foregroundColor: Style.Color.white ]
     }
 }

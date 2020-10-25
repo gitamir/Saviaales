@@ -11,6 +11,7 @@ import UIKit
 class SelectDestinationAirportViewController: UIViewController {
     struct Input {
         let departureAirport: String
+        let isFlightPossible: () -> Bool
     }
 
     struct Output {
@@ -34,12 +35,12 @@ class SelectDestinationAirportViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = Style.Color.themeBlueColor
         let departureAirportView = AirportSelectionView()
-        departureAirportView.updateWithViewModel(
-            .init(type: .top, state: .inactive(text: input.departureAirport))
+        departureAirportView.update(
+            with: .init(type: .top, state: .inactive(text: input.departureAirport))
         )
         let destinationAirportView = AirportSelectionView()
-        destinationAirportView.updateWithViewModel(
-            .init(
+        destinationAirportView.update(
+            with: .init(
                 type: .bottom,
                 state: .active(
                     action: { [weak self] in
@@ -60,13 +61,12 @@ class SelectDestinationAirportViewController: UIViewController {
         ctaButton.setBackgroundColor(Style.Color.lightOrange, for: .highlighted)
         ctaButton.setBackgroundColor(Style.Color.orange, for: .normal)
         ctaButton.setBackgroundColor(Style.Color.lightGray, for: .disabled)
-        ctaButton.isEnabled = false
+        ctaButton.isEnabled = input.isFlightPossible()
     }
 
     private func updateDestination(_ destination: String) {
-        ctaButton.isEnabled = true
-        destinationAirportView?.updateWithViewModel(
-            .init(
+        destinationAirportView?.update(
+            with: .init(
                 type: .bottom,
                 state: .active(
                     action: { [weak self] in
@@ -80,7 +80,10 @@ class SelectDestinationAirportViewController: UIViewController {
 
     private func selectAirportTap() {
         output.selectDestinationAirport { [weak self] destinationAirport in
-            self?.updateDestination(destinationAirport)
+            guard let self = self else { return }
+
+            self.ctaButton.isEnabled = self.input.isFlightPossible()
+            self.updateDestination(destinationAirport)
         }
     }
 

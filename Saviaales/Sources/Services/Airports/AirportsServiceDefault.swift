@@ -13,6 +13,12 @@ class AirportsServiceDefault: AirportsService {
         static let defaultLocaleCode = "ru"
     }
 
+    var departureAirport: Airport = .defaultDeparture
+    var destinationAirport: Airport?
+    var isFlightPossible: Bool {
+        destinationAirport != nil && departureAirport != destinationAirport
+    }
+
     private let networkClient: NetworkClient
     private let resource: NetworkSearchResource
     private var currentTask: CancellableTask?
@@ -20,6 +26,13 @@ class AirportsServiceDefault: AirportsService {
     init(networkClient: NetworkClient, resource: NetworkSearchResource) {
         self.networkClient = networkClient
         self.resource = resource
+        getAirports(for: Airport.defaultDepartureRequestString) { [weak self] result in
+            guard let self = self else { return }
+
+            if case .success(let data) = result {
+                data.first.map { self.departureAirport = $0 }
+            }
+        }
     }
 
     func getAirports(for queryString: String, _ completion: @escaping (Result<[Airport], NetworkError>) -> Void) {

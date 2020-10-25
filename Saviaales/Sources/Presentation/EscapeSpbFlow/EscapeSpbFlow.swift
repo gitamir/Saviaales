@@ -12,7 +12,6 @@ final class EscapeSpbFlow: AirportsServiceDependency {
     var airportsService: AirportsService!
     private let onRootViewControllerCreated: (UIViewController) -> Void
     private weak var navigationController: UINavigationController?
-    private var trolololo: Bool = false
 
     init(onRootViewControllerCreated: @escaping (UIViewController) -> Void) {
         self.onRootViewControllerCreated = onRootViewControllerCreated
@@ -23,29 +22,36 @@ final class EscapeSpbFlow: AirportsServiceDependency {
         let navigationController = CustomNavigationController(rootViewController: initialViewController)
         self.navigationController = navigationController
         onRootViewControllerCreated(navigationController)
-        airportsService.getAirports(for: "paris") { result in
-            switch result {
-                case .success(let airports):
-                    self.trolololo = true
-                    print(airports.debugDescription)
-                case .failure(let error):
-                    self.trolololo = false
-                    print(error.localizedDescription)
-            }
-        }
     }
 
     private func createSelectDestinationViewController() -> UIViewController {
         let viewController: SelectDestinationAirportViewController = .instantiateFromSameNamedStoryboard()
-        viewController.input = .init(departureAirport: "LED")
+        viewController.input = .init(
+            departureAirport: airportsService.departureAirport.iata,
+            isFlightPossible: { self.airportsService.isFlightPossible }
+        )
         viewController.output = .init(
-            selectDestinationAirport: { completion in
-                print("show select destination")
-            },
-            showFlightScreen: {
-                print("show flight screen")
-            }
+            selectDestinationAirport: showSearchAirportsViewController(_:),
+            showFlightScreen: {}
         )
         return viewController
+    }
+
+    private func showSearchAirportsViewController(_ selectAirportCompletion: @escaping (String) -> Void) {
+        guard let navigationController = navigationController else { return }
+
+        let viewController: SearchAirportsViewController = .instantiateFromSameNamedStoryboard()
+        viewController.input = .init(
+            lastUsedIATA: airportsService.destinationAirport?.iata,
+            searchAirports: airportsService.getAirports
+        )
+        viewController.output = .init(
+            selectAirport: { airport in
+                self.airportsService.destinationAirport = airport
+                selectAirportCompletion(airport.iata)
+                self.navigationController?.popViewController(animated: true)
+            }
+        )
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

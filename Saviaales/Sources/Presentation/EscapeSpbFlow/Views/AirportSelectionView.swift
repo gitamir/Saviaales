@@ -80,7 +80,7 @@ class AirportSelectionView: UIView {
         NSLayoutConstraint.pinToSuperview(view: button)
     }
 
-    func updateWithViewModel(_ viewModel: AirportSelectionViewModel) {
+    func update(with viewModel: AirportSelectionViewModel) {
         self.action = viewModel.state.action
         button.setTitle(viewModel.state.buttonText, for: .normal)
         button.isEnabled = viewModel.state.isEnabled

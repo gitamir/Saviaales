@@ -8,3 +8,7 @@
 
 "select_destination_cta_button_title" = "Полетели!";
 "select_destination_selector_placeholder" = "Пожалуйста выберите аэропорт...";
+
+"search_title" = "Поиск";
+"search_placeholder" = "Куда";
+"search_nothing_found" = "По вашему запросу ничего не найдено";

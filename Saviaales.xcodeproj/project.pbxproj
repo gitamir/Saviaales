@@ -10,6 +10,13 @@
 		731B990A25449363002D2E7E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B990925449363002D2E7E /* String+Extensions.swift */; };
 		731B990F2544951B002D2E7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 731B99112544951B002D2E7E /* Localizable.strings */; };
 		731B991425449788002D2E7E /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B991325449788002D2E7E /* UIButton+Extensions.swift */; };
+		731B991A2544D06E002D2E7E /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B99192544D06E002D2E7E /* Debouncer.swift */; };
+		731B991D2544D72D002D2E7E /* SearchAirportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B991C2544D72D002D2E7E /* SearchAirportsViewController.swift */; };
+		731B991F2544D7CE002D2E7E /* SearchAirportsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 731B991E2544D7CE002D2E7E /* SearchAirportsViewController.storyboard */; };
+		731B99212544D99F002D2E7E /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B99202544D99F002D2E7E /* UITableViewCell+Extensions.swift */; };
+		731B99232544DAEE002D2E7E /* AirportSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B99222544DAEE002D2E7E /* AirportSearchTableViewCell.swift */; };
+		731B99252544DB06002D2E7E /* AirportSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 731B99242544DB06002D2E7E /* AirportSearchTableViewCell.xib */; };
+		731B992825459393002D2E7E /* KeyboardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B992725459393002D2E7E /* KeyboardBehavior.swift */; };
 		738FBCD42543358D006CDD80 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738FBCD32543358D006CDD80 /* NetworkClient.swift */; };
 		738FBCD7254335E4006CDD80 /* NetworkClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738FBCD6254335E4006CDD80 /* NetworkClientDefault.swift */; };
 		738FBCDC25433D6A006CDD80 /* NetworkSearchResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738FBCDB25433D6A006CDD80 /* NetworkSearchResource.swift */; };
@@ -43,6 +50,13 @@
 		731B99102544951B002D2E7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		731B991225449552002D2E7E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		731B991325449788002D2E7E /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		731B99192544D06E002D2E7E /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
+		731B991C2544D72D002D2E7E /* SearchAirportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAirportsViewController.swift; sourceTree = "<group>"; };
+		731B991E2544D7CE002D2E7E /* SearchAirportsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchAirportsViewController.storyboard; sourceTree = "<group>"; };
+		731B99202544D99F002D2E7E /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		731B99222544DAEE002D2E7E /* AirportSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportSearchTableViewCell.swift; sourceTree = "<group>"; };
+		731B99242544DB06002D2E7E /* AirportSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirportSearchTableViewCell.xib; sourceTree = "<group>"; };
+		731B992725459393002D2E7E /* KeyboardBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBehavior.swift; sourceTree = "<group>"; };
 		738FBCD32543358D006CDD80 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		738FBCD6254335E4006CDD80 /* NetworkClientDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientDefault.swift; sourceTree = "<group>"; };
 		738FBCDB25433D6A006CDD80 /* NetworkSearchResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSearchResource.swift; sourceTree = "<group>"; };
@@ -84,6 +98,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		731B99182544D056002D2E7E /* Debouncer */ = {
+			isa = PBXGroup;
+			children = (
+				731B99192544D06E002D2E7E /* Debouncer.swift */,
+			);
+			path = Debouncer;
+			sourceTree = "<group>";
+		};
+		731B991B2544D70C002D2E7E /* SearchAirports */ = {
+			isa = PBXGroup;
+			children = (
+				731B991C2544D72D002D2E7E /* SearchAirportsViewController.swift */,
+				731B991E2544D7CE002D2E7E /* SearchAirportsViewController.storyboard */,
+			);
+			path = SearchAirports;
+			sourceTree = "<group>";
+		};
+		731B99262545937D002D2E7E /* KeyboardBehavior */ = {
+			isa = PBXGroup;
+			children = (
+				731B992725459393002D2E7E /* KeyboardBehavior.swift */,
+			);
+			path = KeyboardBehavior;
+			sourceTree = "<group>";
+		};
 		738FBCD225433525006CDD80 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +155,8 @@
 		738FBCDD25434F4F006CDD80 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				731B99262545937D002D2E7E /* KeyboardBehavior */,
+				731B99182544D056002D2E7E /* Debouncer */,
 				73C7B4082544420F00157BA1 /* Style */,
 				73C7B4072544420300157BA1 /* Extensions */,
 			);
@@ -202,6 +243,8 @@
 			children = (
 				73D17772254439AD001DD621 /* EcapeSpbHeaderView.swift */,
 				73C7B40B25447BA000157BA1 /* AirportSelectionView.swift */,
+				731B99222544DAEE002D2E7E /* AirportSearchTableViewCell.swift */,
+				731B99242544DB06002D2E7E /* AirportSearchTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +252,7 @@
 		739A83D32542FD1B00E47A25 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				731B991B2544D70C002D2E7E /* SearchAirports */,
 				73D1776D25442F18001DD621 /* SelectDestination */,
 			);
 			path = ViewControllers;
@@ -244,6 +288,7 @@
 				73C7B41025448AD900157BA1 /* UIImage+Extensions.swift */,
 				731B990925449363002D2E7E /* String+Extensions.swift */,
 				731B991325449788002D2E7E /* UIButton+Extensions.swift */,
+				731B99202544D99F002D2E7E /* UITableViewCell+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,8 +369,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				731B991F2544D7CE002D2E7E /* SearchAirportsViewController.storyboard in Resources */,
 				739A83C62542F9EE00E47A25 /* LaunchScreen.storyboard in Resources */,
 				731B990F2544951B002D2E7E /* Localizable.strings in Resources */,
+				731B99252544DB06002D2E7E /* AirportSearchTableViewCell.xib in Resources */,
 				739A83C32542F9EE00E47A25 /* Assets.xcassets in Resources */,
 				739A83C12542F9EC00E47A25 /* SelectDestinationAirportViewController.storyboard in Resources */,
 			);
@@ -346,21 +393,26 @@
 				73D1776725438830001DD621 /* EscapeSpbFlow.swift in Sources */,
 				739A83BE2542F9EC00E47A25 /* SelectDestinationAirportViewController.swift in Sources */,
 				73C7B40C25447BA000157BA1 /* AirportSelectionView.swift in Sources */,
+				731B992825459393002D2E7E /* KeyboardBehavior.swift in Sources */,
 				73D1776C25438F67001DD621 /* CustomNavigationController.swift in Sources */,
 				738FBCDF25434F69006CDD80 /* URLSessioDataTask+CancellableTask.swift in Sources */,
+				731B99232544DAEE002D2E7E /* AirportSearchTableViewCell.swift in Sources */,
 				738FBCDC25433D6A006CDD80 /* NetworkSearchResource.swift in Sources */,
 				738FBCD42543358D006CDD80 /* NetworkClient.swift in Sources */,
 				73D17765254369BB001DD621 /* AirportsServiceDefault.swift in Sources */,
 				731B991425449788002D2E7E /* UIButton+Extensions.swift in Sources */,
+				731B991D2544D72D002D2E7E /* SearchAirportsViewController.swift in Sources */,
 				739F525525436225000A6CED /* Airport.swift in Sources */,
 				73D1777525443A2F001DD621 /* UIView+Extensions.swift in Sources */,
 				73D1776F25443027001DD621 /* UIViewController+Extensions.swift in Sources */,
+				731B99212544D99F002D2E7E /* UITableViewCell+Extensions.swift in Sources */,
 				73D177632543685E001DD621 /* AirportsService.swift in Sources */,
 				73C7B41125448AD900157BA1 /* UIImage+Extensions.swift in Sources */,
 				73D17773254439AD001DD621 /* EcapeSpbHeaderView.swift in Sources */,
 				739A83E025431D4800E47A25 /* ContainerFactory.swift in Sources */,
 				73D17771254431E8001DD621 /* UIColor+Extensions.swift in Sources */,
 				739A83BA2542F9EC00E47A25 /* AppDelegate.swift in Sources */,
+				731B991A2544D06E002D2E7E /* Debouncer.swift in Sources */,
 				73C7B40A2544421C00157BA1 /* Style.swift in Sources */,
 				73C7B40E2544873600157BA1 /* NSLayoutConstraint+Extensions.swift in Sources */,
 			);

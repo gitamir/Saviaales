@@ -31,5 +31,8 @@ enum Style {
 
     enum Font {
         static let buttonText: UIFont = .systemFont(ofSize: 16)
+        static let searchInfoText: UIFont = .systemFont(ofSize: 14)
+        static let searchAirportCodeText: UIFont = .systemFont(ofSize: 18, weight: .black)
+        static let searchAirportInfoHeaderText: UIFont = .systemFont(ofSize: 18)
     }
 }
