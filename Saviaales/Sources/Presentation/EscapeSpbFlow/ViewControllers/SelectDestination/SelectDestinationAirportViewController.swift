@@ -33,7 +33,7 @@ class SelectDestinationAirportViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.backgroundColor = Style.Color.themeBlueColor
+        view.backgroundColor = Style.Color.themeBlue
         let departureAirportView = AirportSelectionView()
         departureAirportView.update(
             with: .init(type: .top, state: .inactive(text: input.departureAirport))

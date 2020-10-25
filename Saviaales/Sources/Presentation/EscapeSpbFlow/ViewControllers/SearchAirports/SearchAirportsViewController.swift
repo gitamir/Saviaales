@@ -49,8 +49,8 @@ class SearchAirportsViewController: UIViewController, UISearchBarDelegate, UITab
 
     private func setupUI() {
         title = "search_title".localized
-        view.backgroundColor = Style.Color.themeBlueColor
-        searchBar.tintColor = Style.Color.themeBlueColor
+        view.backgroundColor = Style.Color.themeBlue
+        searchBar.tintColor = Style.Color.themeBlue
         searchBar.placeholder = "search_placeholder".localized
         nothingFoundLabel.font = Style.Font.searchAirportInfoHeaderText
         nothingFoundLabel.text = "search_nothing_found".localized
